@@ -1,0 +1,16 @@
+.card {
+    border: $base-border-thickness solid #ddd;
+    border-radius: div($base-border-radius, 3);
+    padding: map-get($spacers, 4);
+    box-shadow: $base-box-shadow;
+  
+    .card-title {
+      font-size: $font-size-lg;
+      font-weight: bold;
+      padding-bottom: map-get($spacers, 2);
+      margin: 0;
+    }
+    .card-body {
+      font-size: $base-font-size;
+    }
+}

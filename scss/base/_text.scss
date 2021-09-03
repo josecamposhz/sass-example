@@ -1,0 +1,11 @@
+@each $val in $text-align {
+    .text-#{$val} {
+        text-align: $val;
+    }
+}
+
+@each $key, $val in $font-sizes {
+    .text-#{$key} {
+        font-size: $val;
+    }
+}

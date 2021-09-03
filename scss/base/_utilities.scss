@@ -1,0 +1,32 @@
+$variants: (
+  l: left,
+  r: right,
+  t: top,
+  b: bottom,
+);
+
+// padding - margin & variants
+@each $key, $val in $spacers {
+    .p-#{$key} {
+        padding: $val;
+    }
+    .m-#{$key} {
+        margin: $val;
+    }
+    @each $v-key, $v-val in $variants {
+        .p#{$v-key}-#{$key} {
+            padding-#{$v-val}: $val; 
+        }
+        .m#{$v-key}-#{$key} {
+            margin-#{$v-val}: $val; 
+        }
+    }
+}
+
+@each $val in $display {
+    .d-#{$val} {
+        display: $val;
+    }
+}
+// @each $justify
+// @each $align-items
